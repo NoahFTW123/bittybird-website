@@ -13,6 +13,8 @@ node_modules
 client/dist
 dist-ssr
 *.local
+server/firebaseKey.json
+
 
 # Ignore all env files in any folder
 .env
