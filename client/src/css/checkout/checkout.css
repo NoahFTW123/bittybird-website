@@ -1,0 +1,125 @@
+/* General Styling */
+.checkout-page {
+  font-family: 'Sugar', sans-serif;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-page ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.checkout-page li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* Section Headers */
+.checkout-page h2 {
+  text-align: center;
+  color: #3589a1;
+  border-bottom: 2px solid #3589a1;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* 🔹 Order Summary */
+.order-summary {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Form Sections */
+.form-section {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Form Layout - Two Column Fix */
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adds spacing between fields */
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* 🔹 Two equal columns (First Name / Last Name, etc.) */
+.half-width {
+  flex: 1;
+  min-width: 32%;
+}
+
+/* 🔹 Three equal columns (City / State / Zip Code) */
+.third-width {
+  flex: 1;
+  min-width: 24%;
+}
+
+/* 🔹 Full-width fields (Email, Address, etc.) */
+.full-width {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* 🔹 Fix for Country dropdown */
+.select-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* 🔹 Input Fields */
+.half-width, .full-width, .third-width, .checkbox,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+  color: #333;
+}
+
+/* 🔹 Aligning the Checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* 🔹 Fix Checkbox Input */
+input[type="checkbox"] {
+  width: auto;
+  transform: scale(1.1);
+}
+
+/* 🔹 Payment Section */
+.payment-section {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #45a049, #2e7d32);
+}

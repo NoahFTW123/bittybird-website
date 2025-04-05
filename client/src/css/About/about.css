@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Soulmate';
+    src: url('../../fonts/SoulmateRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sugar';
+    src: url('../../fonts/SugarMagic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Page Styles */
+.about-page {
+    font-family: 'Soulmate', sans-serif;
+    background-color: white;
+    color: black;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #b9dcce; /* Primary color */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+}
+
+/* About Content Section */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures center alignment */
+    max-width: 800px;
+    margin: 50px auto;
+    gap: 30px; /* Keeps spacing consistent */
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #3589a1; /* Secondary color */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: black;
+}
+
+.about-content,
+.faqs-section {
+    width: 100%; /* Makes them the same width */
+    margin: 0 auto;
+}
+
+/* FAQs Section */
+.faqs-section {
+    max-width: 800px;
+    margin: 50px auto 0; /* Remove bottom margin if needed */
+    padding: 30px; /* Match about-content */
+    box-sizing: border-box; /* Ensures padding doesn’t add extra width */
+}
+
+.faqs-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.faqs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.faq-item {
+    background-color: #3589a1;
+    width: 80%;
+    max-width: 800px;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+.faq-item:hover {
+    background-color: white;
+}
+
+.faq-question {
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    margin: 0;
+}
+
+.faq-answer {
+    font-family: "Century Gothic", sans-serif;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: black;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #b9dcce;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.footer-text {
+    font-family: "Soulmate", sans-serif;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .about-title,
+    .faqs-title {
+        font-size: 1.5rem;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+    }
+}

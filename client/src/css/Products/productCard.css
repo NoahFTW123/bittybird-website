@@ -1,0 +1,149 @@
+.product-card {
+  flex: 0 0 auto;
+  width: 220px;
+  padding: 1rem;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Lucida Sans', 'Lucida Grande', sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.3rem 0;
+  text-align: center;
+  color: #333;
+}
+
+.product-price {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.2rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.product-buttons {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.view-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  height: 20px;
+}
+
+.view-details:hover {
+  background: #0056b3;
+}
+
+.addCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  min-width: 50px;
+  height: 40px;
+}
+
+.addCart:hover {
+  background: #1e7e34;
+}
+
+/* Full-Screen Overlay */
+.full-screen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.overlay-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Grande', sans-serif;
+}
+
+.overlay-content textarea {
+  width: 100%;
+  height: 80px;
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.overlay-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  flex-wrap: wrap; /* allow wrapping if needed */
+  gap: 10px;       /* add space between buttons */
+}
+
+.overlay-buttons button {
+  flex: 1 1 45%;          /* allow buttons to shrink/grow */
+  justify-content: center;
+  padding: 10px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  white-space: nowrap;   /* prevent multi-line text */
+  box-sizing: border-box;
+}
+
+
+.overlay-buttons button:first-child {
+  background: #28a745;
+  color: white;
+}
+
+.overlay-buttons button:last-child {
+  background: #dc3545;
+  color: white;
+}

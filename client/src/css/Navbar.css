@@ -1,0 +1,249 @@
+/* Navbar Base Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #3589a1;
+    color: white;
+    z-index: 9999;
+    border-bottom: #3589a1;
+    font-family: "Century Gothic", sans-serif;
+}
+
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    position: relative;
+    transform: translateX(-50px);
+}
+
+/* Title */
+.navbar-title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+}
+
+.navbar-title h1 {
+    font-size: 1.5rem;
+    font-family: 'Signatura Monoline', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: white;
+}
+
+.navbar-title h1 a:link, .navbar-title h1 a:visited {
+    color: white;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Ensure all links in navbar appear white */
+.nav-link {
+    color: white !important;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #646cff;
+}
+
+/* Dropdown Wrapper */
+.dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.mega-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    border: 1px solid #3589a1;
+    padding: 5px;
+    z-index: 1000;
+}
+.dropdown-wrapper:hover .mega-dropdown {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.dropdown-column {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    color: #3589a1;
+}
+
+.dropdown-column h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #213547;
+    margin-bottom: 8px;
+    padding-bottom: 3px;
+}
+
+/* Ensure dropdown links are styled separately */
+.dropdown-column a {
+    text-decoration: none;
+    color: #3589a1;
+    font-size: 1rem;
+    padding: 3px 0;
+    transition: color 0.2s;
+    display: block;
+}
+
+.dropdown-column a:hover {
+    color: #646cff;
+}
+
+/* Navbar Actions */
+.navbar-actions {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.navbar-btn {
+    background: none;
+    color: white;
+    padding: 0.5rem 1rem; /* Ensure all buttons have equal padding */
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+    border: none; /* Remove any default browser styling */
+    border-radius: 20px; /* Ensure all buttons are oval-shaped */
+    max-width: unset;
+}
+
+.navbar-btn:hover {
+    background-color: #646cff;
+    color: white;
+    border-radius: 20px; /* Ensure hover keeps uniform shape */
+}
+
+.user-info {
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    color: white;
+    width: 200px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.search-dropdown {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adds spacing between input and button */
+}
+
+.search-dropdown input {
+    padding: 5px;
+    color: black;
+    border: 1px solid #ccc;
+    flex: 1; /* Ensures input expands to take available space */
+}
+
+.search-btn {
+    padding: 5px 10px;
+    margin: 5px 0;
+    background: #3589a1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .navbar-container {
+      align-items: flex-start;
+      padding: 1rem 2rem;
+      gap: 0.5rem;
+      transform: none; /* remove transform */
+    }
+  
+    .user-info {
+      order: -1;
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: white;
+      padding-left: 0;
+      margin-bottom: -0.25rem;
+    }
+  
+    .navbar-title {
+      position: static;
+      font-size: 1.8rem;
+      align-self: flex-start;
+      margin-bottom: 0.5rem;
+      transform: none;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+  
+    .navbar-actions {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      width: auto;
+      transform:translateX(-70px); 
+    }
+  
+    .search-dropdown {
+      position: static;
+      width: 100%;
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 0;
+    }
+  
+    .search-dropdown input {
+      max-width: 200px;
+    }
+  }
+  

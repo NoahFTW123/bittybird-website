@@ -1,0 +1,148 @@
+/* ====== Contact Page Layout ====== */
+.ContactPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    min-height: calc(100vh - 100px); /* Full viewport height */
+    padding: 20px; /* Prevents content from touching edges on smaller screens */
+    box-sizing: border-box; /* Ensures padding is included in height calculations */
+}
+
+/* ====== Contact Box Styling ====== */
+.Contact {
+    background-color: #3589a1;
+    padding: 20px 40px; /* Adds padding around the edges of the form */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Ensures the box doesn’t become too wide */
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.ContactTitle {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* ====== Social Links Styling ====== */
+.SocialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.Facebook,
+.Instagram {
+    font-size: 30px;
+    color: #b9dcce;
+    transition: color 0.3s ease;
+}
+
+.Facebook:hover {
+    color: #2a6f8a;
+}
+
+.Instagram:hover {
+    color: #97c7b5;
+}
+
+/* ====== Form Styling ====== */
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between inputs */
+}
+
+.message {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.email, .name,
+.textMessage {
+    width: 90%; /* Keeps inputs narrower within the white box */
+    max-width: 400px; /* Limits how wide the inputs can get */
+    margin: 0 auto; /* Centers the inputs horizontally */
+    padding: 10px;
+    border: 1px solid #3589a1;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Includes padding in width/height */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Add smooth focus transitions */
+}
+
+/* ====== Focus Effect ====== */
+.name:focus,
+.email:focus,
+.textMessage:focus {
+    outline: none;
+    border-color: #2a6f8a;
+    box-shadow: 0 0 5px rgba(50, 138, 195, 0.5);
+}
+
+.textMessage {
+    height: 100px;
+    resize: none;
+}
+
+/* ====== Submit Button Styling ====== */
+.btnSubmit {
+    background-color: #b9dcce;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 50%; /* Ensures the button is smaller and centered */
+    max-width: 200px; /* Limits button width on larger screens */
+    margin: 0 auto; /* Centers the button */
+    transition: background-color 0.3s ease;
+}
+
+.btnSubmit:hover {
+    background-color: #b9dcce;
+}
+
+/* ====== Status Message ====== */
+.status {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    color: black;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #b9dcce;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.footer-text {
+    font-family: "Soulmate", sans-serif;
+    font-size: 1rem;
+}
+
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+    .Contact {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .email,
+    .textMessage {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .btnSubmit {
+        width: 100%; /* Full width for buttons on small screens */
+    }
+}
+
