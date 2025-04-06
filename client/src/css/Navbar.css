@@ -48,6 +48,14 @@
     margin-top: 40px;
 }
 
+.dropdown-link {
+    cursor: pointer;
+}
+
+.dropdown-link:hover {
+    color: #646cff;
+}
+
 /* Ensure all links in navbar appear white */
 .nav-link {
     color: white !important;
@@ -166,7 +174,8 @@
     z-index: 1000;
     display: flex;
     align-items: center;
-    gap: 5px; /* Adds spacing between input and button */
+    gap: 5px;
+    transform: translateX(-30%);
 }
 
 .search-dropdown input {
@@ -234,16 +243,22 @@
     }
   
     .search-dropdown {
-      position: static;
-      width: 100%;
-      margin-top: 0.5rem;
-      display: flex;
-      justify-content: flex-end;
-      padding-right: 0;
-    }
-  
-    .search-dropdown input {
-      max-width: 200px;
-    }
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 0.25rem;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1001;
+      }
+    
+      .search-dropdown input {
+        max-width: 150px;
+        width: 100%;
+      }
   }
   

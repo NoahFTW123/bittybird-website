@@ -69,7 +69,7 @@ function Navbar({ onHeightChange }) {
         {/* Links */}
         <nav className="navbar-links">
         <div className="dropdown-wrapper">
-            <span className="nav-link" onClick={() => window.location.href = "/products"}>SHOP BY PRODUCTS</span>
+        <Link to="/products" className="nav-link">SHOP BY PRODUCTS</Link>
             <div className="mega-dropdown">
                 <div className="dropdown-column">
                     <h3>Products</h3>
