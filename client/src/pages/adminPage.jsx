@@ -61,7 +61,7 @@ const AdminPage = () => {
         setSelectedProduct(productId);
 
         try {
-            const response = await fetch(`${API_URL}/${productId}`);
+            const response = await fetch(`${API_URL}/products/${productId}`);
             if (!response.ok) throw new Error("Failed to fetch products");
 
             const data = await response.json();
@@ -89,7 +89,7 @@ const AdminPage = () => {
 
     const handleAddProduct = async () => {
         try {
-            await axios.post(API_URL, productData);
+            await axios.post(`${API_URL}/products/`, productData);
             alert("Added product");
             fetchProducts();
         } catch (error) {
@@ -99,7 +99,7 @@ const AdminPage = () => {
 
     const handleUpdateProduct = async () => {
         try {
-            await axios.put(`${API_URL}/${selectedProduct}`, productData);
+            await axios.put(`${API_URL}/products/${selectedProduct}`, productData);
             alert("Updated product");
             fetchProducts();
         } catch (error) {
@@ -114,7 +114,7 @@ const AdminPage = () => {
         }
 
         try {
-            await axios.delete(`${API_URL}/${selectedProduct}`);
+            await axios.delete(`${API_URL}/products/${selectedProduct}`);
             alert("Deleting product");
             fetchProducts();
             setConfirmDelete(false);
