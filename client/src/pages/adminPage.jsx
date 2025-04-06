@@ -3,7 +3,7 @@ import "../css/admin.css"
 import axios from "axios";
 import CreateFolderAndUploadPhotos from "../components/Developer/uploadPhotos";
 
-const API_URL = "http://localhost:5001/products";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const AdminPage = () => {
     const [action, setAction] = useState("");
